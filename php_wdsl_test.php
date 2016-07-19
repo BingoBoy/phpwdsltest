@@ -11,5 +11,6 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function php_wdsl_test() {
    return "Hello world!"; 
+   phpinfo();
 }
 add_shortcode( 'phpwdsltest', 'php_wdsl_test' );
