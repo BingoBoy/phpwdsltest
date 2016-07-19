@@ -8,9 +8,10 @@ Version: 0.52
 Author URI: http://tyfon.no
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+require('nusoap/lib/nusoap.php');
 
 function php_wdsl_test() {
-   return "Hello world!"; 
    phpinfo();
+   return "Hello world!"; 
 }
 add_shortcode( 'phpwdsltest', 'php_wdsl_test' );
