@@ -10,6 +10,6 @@ Author URI: http://tyfon.no
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function php_wdsl_test() {
-    
+   return "Hello world!"; 
 }
 add_shortcode( 'phpwdsltest', 'php_wdsl_test' );
