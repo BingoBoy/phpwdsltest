@@ -4,7 +4,7 @@ Plugin Name: PHPwdslTest
 Plugin URI: http://tyfon.no
 Description: Try to consume a web service with php in Wordpress
 Author: Truls Dahl
-Version: 0.51
+Version: 0.52
 Author URI: http://tyfon.no
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
