@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 require('nusoap/lib/nusoap.php');
 
 function php_wdsl_test() {
-   phpinfo();
+/*   phpinfo();*/
    return "Hello world!"; 
 }
 add_shortcode( 'phpwdsltest', 'php_wdsl_test' );
