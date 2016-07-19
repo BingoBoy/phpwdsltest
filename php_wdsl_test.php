@@ -12,6 +12,10 @@ require('nusoap/lib/nusoap.php');
 
 function php_wdsl_test() {
 /*   phpinfo();*/
-   return "Hello world!"; 
+/*   return "Hello world!"; */
+ini_set("soap.wsdl_cache_enabled", "0"); // disabling WSDL cache
+$client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl");
+$return = $client->hentTjenestebeskrivelser;
+print_r($return);
 }
 add_shortcode( 'phpwdsltest', 'php_wdsl_test' );
