@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 require('nusoap/lib/nusoap.php');
 
 
-function php_wdsl_test2() {
+function php_wdsl_test() {
 /* Create a class for your webservice structure, in this case: Contact */
 class Contact {
     function Contact($id, $name) 
