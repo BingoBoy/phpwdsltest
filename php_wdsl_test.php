@@ -34,7 +34,7 @@ $params = array(
 );
 
 /* Invoke webservice method with your parameters */
-$response = $client->__soapCall("Function1", array($params));
+$response = $client->__soapCall(array($params));
 
 /* Print webservice response */
 var_dump($response);
