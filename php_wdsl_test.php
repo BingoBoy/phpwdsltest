@@ -14,7 +14,7 @@ require('nusoap/lib/nusoap.php');
 function php_wdsl_test2() {
   
 /* Initialize webservice with your WSDL */
-$client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl", array('login' => "201128", 'password' => "test1149"));
+$client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl", array('login' => '201128', 'password' => 'test1149'));
 
 $params = array (
     "Tittel" => $name
