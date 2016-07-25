@@ -17,7 +17,7 @@ function php_wdsl_test2() {
 $client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl");
 
 var_dump($client->__getFunctions()); 
-var_dump($client->__getTypes());
+/*var_dump($client->__getTypes());*/
 
 }
 add_shortcode( 'phpwdsltest2', 'php_wdsl_test2' );
