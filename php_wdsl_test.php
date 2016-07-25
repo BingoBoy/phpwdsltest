@@ -7,20 +7,8 @@ Author: Truls Dahl
 Version: 0.52
 Author URI: http://tyfon.no
 */
-defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+/*defined( 'ABSPATH' ) or die( 'No script kiddies please!' );*/
 require('nusoap/lib/nusoap.php');
-
-function php_wdsl_test() {
-/*   phpinfo();*/
-/*   return "Hello world!"; */
-ini_set("soap.wsdl_cache_enabled", "0"); // disabling WSDL cache
-$client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl");
-$return = $client->hentTjenestebeskrivelser(100);
-print_r($return);
-}
-add_shortcode( 'phpwdsltest', 'php_wdsl_test' );
-
-
 
 
 function php_wdsl_test2() {
@@ -34,8 +22,8 @@ $params = array(
 );
 
 /* Invoke webservice method with your parameters */
-$response = $client->__soapCall(array($params));
-
+/*$response = $client->__soapCall(array($params));*/
+$response = $client;
 /* Print webservice response */
 var_dump($response);
 
