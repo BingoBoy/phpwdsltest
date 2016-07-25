@@ -16,14 +16,16 @@ function php_wdsl_test2() {
 /* Initialize webservice with your WSDL */
 $client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl");
 
+var_dump($client->__getFunctions()); 
+/*var_dump($client->__getTypes());*/
+
 /* Invoke webservice method with your parameters */
 $response = $client->__soapCall("hentAlleTjenestebeskrivelser", "");
 
 /* Print webservice response */
 var_dump($response);
 
-var_dump($client->__getFunctions()); 
-/*var_dump($client->__getTypes());*/
+
 
 }
 add_shortcode( 'phpwdsltest2', 'php_wdsl_test2' );
