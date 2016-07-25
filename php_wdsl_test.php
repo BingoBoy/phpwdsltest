@@ -28,8 +28,13 @@ function php_wdsl_test2() {
 /* Initialize webservice with your WSDL */
 $client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl");
 
+$params = array(
+  "hentOversikt" => "",
+  "hentOversiktResponse" => "",
+);
+
 /* Invoke webservice method with your parameters */
-$response = $client->__soapCall("fraser", "fraserResponse");
+$response = $client->__soapCall("Function1", array($params));
 
 /* Print webservice response */
 var_dump($response);
