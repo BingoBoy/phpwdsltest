@@ -20,7 +20,7 @@ var_dump($client->__getFunctions());
 /*var_dump($client->__getTypes());*/
 
 /* Invoke webservice method with your parameters */
-$response = $client->__soapCall("hentAlleTjenestebeskrivelser", "");
+$response = $client->__soapCall("hentAlleTjenestebeskrivelser");
 
 /* Print webservice response */
 var_dump($response);
