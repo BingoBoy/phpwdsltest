@@ -8,8 +8,22 @@ Version: 0.52
 Author URI: http://tyfon.no
 */
 /*defined( 'ABSPATH' ) or die( 'No script kiddies please!' );*/
-require('nusoap/lib/nusoap.php');
+require_once 'nusoap/lib/nusoap.php';
 
+
+function php_wdsl_nusoap() {
+  
+/* Initialize webservice with your WSDL */
+$client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl", true);
+$proxy = $soap->getProxy();
+
+$response = $proxy=>hentAlleTjenestebeskrivelser();
+
+echo $response;
+
+
+}
+add_shortcode( 'phpwdslnusoap', 'php_wdsl_nusoap' );
 
 function php_wdsl_test2() {
   
