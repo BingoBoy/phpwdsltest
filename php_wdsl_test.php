@@ -35,11 +35,13 @@ function funksjonsoversikt() {
   /* Initialize webservice with your WSDL */
 $client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl", array('login' => '201128', 'password' => 'test1149'));
 
-echo "FUNKSJONER";
-echo '\r\n';
+echo "FUNKSJONER
+";
+
 print_r($client->__getFunctions()); 
-echo "TYPE";
-echo '\r\n';
+echo "TYPE
+";
+
 print_r($client->__getTypes());
 }
 add_shortcode( 'funksjonsoversikt', 'funksjonsoversikt' );
