@@ -32,6 +32,9 @@ add_shortcode( 'phpwdsltest2', 'php_wdsl_test2' );
 En funksjon som viser alle tilgjengelige funksjoner og typer
 */
 function funksjonsoversikt() {
+  /* Initialize webservice with your WSDL */
+$client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl", array('login' => '201128', 'password' => 'test1149'));
+
 echo "FUNKSJONER";
 var_dump($client->__getFunctions()); 
 echo "TYPE";
