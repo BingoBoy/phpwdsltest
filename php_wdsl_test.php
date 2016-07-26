@@ -35,6 +35,9 @@ function funksjonsoversikt() {
   /* Initialize webservice with your WSDL */
 $client = new SoapClient("http://www.nasjonaltjenestekatalog.no/ws7/katalog?wsdl", array('login' => '201128', 'password' => 'test1149'));
 
+$allefunksjoner = $client->__getFunctions();
+echo str_replace(array('&lt;?php&nbsp;','?&gt;'), '', highlight_string( '<?php ' .     var_export($allefunksjoner, true) . ' ?>', true ) );
+
 echo "FUNKSJONER
 ";
 
