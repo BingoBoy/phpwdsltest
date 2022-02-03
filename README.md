@@ -1,2 +1,2 @@
 # phpwdsltest
-A wordpress function to consome a web service
+A wordpress function to consume a web service
